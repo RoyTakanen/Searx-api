@@ -1,0 +1,22 @@
+{
+  "name": "searx-api",
+  "version": "1.0.1",
+  "description": "Api for Searx instances.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "searx",
+    "api",
+    "web",
+    "scraping",
+    "web",
+    "search"
+  ],
+  "author": "Kaikkitietokoneista",
+  "license": "MIT",
+  "homepage": "https://github.com/owner/project#readme"
+}
