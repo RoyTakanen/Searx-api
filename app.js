@@ -20,12 +20,21 @@ class Searx {
         })
 
         resp.on('end', () => {
-          callback(JSON.parse(data));
+          callback(JSON.parse(data), null);
         });
       })
     } else {
-      callback("Problem occurred.");
+      callback(null, "Problem occurred.");
     }
+  }
+
+  a_find(searchterm) {
+    return new Promise((reject, resolve) => {
+      this.find(searchterm, (data, err) => {
+        if (err) return reject(err)
+        resolve(data);
+      })
+    })
   }
 }
 
