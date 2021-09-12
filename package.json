@@ -1,6 +1,6 @@
 {
   "name": "searx-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Api for Searx instances.",
   "main": "app.js",
   "scripts": {
