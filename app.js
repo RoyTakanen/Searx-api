@@ -20,9 +20,11 @@ class Searx {
         })
 
         resp.on('end', () => {
-          if (data == "Rate limit exceeded")
+          if (data == "Rate limit exceeded") {
             callback("rate_limited", data);
-          callback(null, JSON.parse(data));
+          } else {
+            callback(null, JSON.parse(data));
+          }
         });
       })
     } else {
