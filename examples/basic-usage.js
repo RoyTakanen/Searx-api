@@ -1,7 +1,9 @@
-const Searxuser = require('searx-api');
+// In production this would be:
+// const Searxuser = require('searx-api');
+const Searxuser = require('../app'); 
 
 const searx = new Searxuser(
-  'https://searx.asdew.kaikkitietokoneista.net/', //Url
+  'https://searx.fi/', //Url
   'https', //Protocol
   'en-US', //Language
   '1' //Safe search
