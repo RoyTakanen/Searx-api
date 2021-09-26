@@ -4,7 +4,7 @@
 npm i searx-api
 ```
 
-## Simple usage
+## Simple usage (callback style)
 
 ```javascript
 
@@ -25,5 +25,20 @@ searx.find("kaikkitietokoneista", function(data) {
   });
 });
 
+
+```
+
+## Async usage
+
+```javascript
+try {
+  const results = await searx.a_find("kaikkitietokoneista")
+  results.forEach((item) => {
+    console.log("TITLE: " + item.title + "\n\t URL: " + item.url);
+  });
+} catch(e) {
+  // error occured while searching
+  console.log("ERROR WHILE SEARCHING: ", e)
+}
 
 ```
