@@ -1,6 +1,6 @@
 // In production this would be:
 // const Searxuser = require('searx-api');
-const Searxuser = require('../app'); 
+const Searxuser = require('../../app'); 
 
 const searx = new Searxuser(
   'https://searx.fi/', //Url
