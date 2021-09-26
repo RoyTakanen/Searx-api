@@ -4,9 +4,15 @@
 npm i searx-api
 ```
 
-## Simple usage (callback style)
+## Examples
+
+Can be found in folder [examples](/examples/)
+
+### Simple usage (callback style)
 
 ```javascript
+
+const Searxuser = require('searx-api');
 
 const searx = new Searxuser(
   'https://searx.fi/', //Url
@@ -30,9 +36,18 @@ searx.find("kaikkitietokoneista", function(err, data) {
 
 ```
 
-## Async usage
+### Async usage
 
 ```javascript
+const Searxuser = require('searx-api');
+
+const searx = new Searxuser(
+  'https://searx.fi/', //Url
+  'https', //Protocol
+  'en-US', //Language
+  '1' //Safe search
+)
+
 try {
   const results = await searx.a_find("kaikkitietokoneista")
   results.forEach((item) => {
