@@ -10,7 +10,7 @@ class Searx {
   }
 
   find(searchterm, callback) {
-    let fullurl = this.url + '?q=' + searchterm + '&language=' + this.language + '&safesearch=' + this.safe + '&format=json'
+    let fullurl = this.url + '/search?q=' + searchterm + '&language=' + this.language + '&safesearch=' + this.safe + '&format=json'
     if (this.protocol == "https") {
       https.get(fullurl, (resp) => {
         let data = ''
