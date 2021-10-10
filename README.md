@@ -15,7 +15,7 @@ Can be found in folder [examples](/examples/)
 const Searxuser = require('searx-api');
 
 const searx = new Searxuser(
-  'https://searx.fi/', //Url
+  'https://searx.kaikkitietokoneista.net//', //Url
   'https', //Protocol
   'en-US', //Language
   '1' //Safe search
@@ -42,7 +42,7 @@ searx.find("kaikkitietokoneista", function(err, data) {
 const Searxuser = require('searx-api');
 
 const searx = new Searxuser(
-  'https://searx.fi/', //Url
+  'https://searx.kaikkitietokoneista.net//', //Url
   'https', //Protocol
   'en-US', //Language
   '1' //Safe search

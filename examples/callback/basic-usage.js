@@ -3,7 +3,7 @@
 const Searxuser = require('../../app'); 
 
 const searx = new Searxuser(
-  'https://searx.fi/', //Url
+  'https://searx.kaikkitietokoneista.net/', //Url
   'https', //Protocol
   'en-US', //Language
   '1' //Safe search
