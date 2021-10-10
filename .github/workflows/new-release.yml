@@ -1,19 +1,18 @@
 name: Publish Release
 
 on:
-  pull_request_review:
-    types: [submitted]
-    branches: [master]
+  push:
+    branches:
+      - master
 
 jobs:
   new-release:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Release from pull request
-      if: github.event.review.state == 'approved'
+    - name: Release from merge to master
       uses: elgohr/Github-Release-Action@master
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        args: Made release from latest pull request
+        args: Made release from latest merge request
