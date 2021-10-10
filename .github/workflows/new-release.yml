@@ -11,10 +11,13 @@ jobs:
   new-release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Release from merge to master
-      uses: elgohr/Github-Release-Action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-      with:
-        args: Made release from latest merge request
+      - name: "Made a new release"
+        run: |
+          echo "done!"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
